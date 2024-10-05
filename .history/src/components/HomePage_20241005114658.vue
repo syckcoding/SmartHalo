@@ -1,5 +1,4 @@
-<!-- !!!版本一!!! -->
-<!-- <template>
+<template>
   <div class="home">
     <el-row :gutter="20" class="intro-section">
       <el-col :span="24">
@@ -111,11 +110,9 @@ export default {
   background-color: #66b1ff;
   border-color: #66b1ff;
 }
-</style> -->
+</style>
 
 
-
-<!-- !!!版本二!!! -->
 <!-- <template>
   <div class="home">
     <el-row :gutter="20" class="intro-section">
@@ -235,11 +232,7 @@ export default {
 }
 </style> -->
 
-
-
-
-<!-- !!!版本三!!! -->
-<template>
+<!-- <template>
   <div class="home">
     <el-row :gutter="20" class="intro-section">
       <el-col :span="24">
@@ -375,4 +368,4 @@ export default {
   background: linear-gradient(to right, #66b1ff, #409eff); /* 悬停时反向渐变，增强交互感 */
   border-color: #66b1ff;
 }
-</style>
+</style> -->

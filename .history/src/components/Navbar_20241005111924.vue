@@ -34,8 +34,8 @@ export default {
 
 <style scoped>
 .el-menu-demo {
-  background-color: #f8f9fa;  /* 浅灰色背景，与主页阴影一致 */
-  color: #333;
+  background-color: #545c64;
+  color: #fff;
   padding: 10px;
   display: flex;  /* 使用Flex布局 */
   align-items: center;
@@ -53,15 +53,10 @@ export default {
 }
 
 .el-menu-demo .el-menu-item {
-  color: #333;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 0 20px;
-  transition: color 0.3s ease;
+  color: #fff;
 }
 
 .menu-right {
-  display: flex;
+  display: flex;  /* 确保子元素在同一行显示 */
 }
 </style>
-\
