@@ -1,4 +1,3 @@
-<!-- !!!版本一!!! -->
 <!-- <template>
   <div class="home">
     <el-row :gutter="20" class="intro-section">
@@ -113,9 +112,6 @@ export default {
 }
 </style> -->
 
-
-
-<!-- !!!版本二!!! -->
 <!-- <template>
   <div class="home">
     <el-row :gutter="20" class="intro-section">
@@ -235,10 +231,6 @@ export default {
 }
 </style> -->
 
-
-
-
-<!-- !!!版本三!!! -->
 <template>
   <div class="home">
     <el-row :gutter="20" class="intro-section">
@@ -246,11 +238,15 @@ export default {
         <el-card class="intro-card">
           <h1 class="intro-title">智能合约优化工具介绍</h1>
           <p class="intro-description">欢迎使用智能合约优化工具。本工具旨在帮助用户简化合约优化流程，提供便捷的功能和详细的优化分析。</p>
+          <ul class="intro-features">
+            <li>简化合约优化流程，节省时间</li>
+            <li>详细的优化分析，提升合约效率</li>
+            <li>便捷的功能模块，易于使用</li>
+            <li>支持多种合约类型的优化</li>
+          </ul>
         </el-card>
       </el-col>
     </el-row>
-
-    <div class="divider"></div>
 
     <el-row :gutter="20" class="contracts">
       <el-col :span="8" v-for="contract in contracts" :key="contract.id">
@@ -262,9 +258,7 @@ export default {
             <p>合约信息: {{ contract.info }}</p>
           </div>
           <div class="card-actions center-button">
-            <el-button type="primary" @click="viewDetails(contract.id)" class="details-button">
-              <i class="el-icon-search"></i> 查看详情
-            </el-button>
+            <el-button type="primary" @click="viewDetails(contract.id)" class="details-button">查看详情</el-button>
           </div>
         </el-card>
       </el-col>
@@ -325,13 +319,8 @@ export default {
 .intro-features li {
   margin-bottom: 10px;
 }
-.divider {
-  height: 2px;
-  background-color: #e0e0e0;
-  margin: 40px 0; /* 增加顶部和底部间距，分隔引导和合约部分 */
-}
 .contracts {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 .box-card {
   padding: 25px;
@@ -362,17 +351,16 @@ export default {
   margin-top: 20px;
 }
 .details-button {
-  background: linear-gradient(to right, #409eff, #66b1ff); /* 添加渐变背景，使按钮更显眼 */
+  background-color: #409eff;
   border-color: #409eff;
   color: #ffffff;
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加轻微的发光效果，突出按钮 */
 }
 .details-button:hover {
-  background: linear-gradient(to right, #66b1ff, #409eff); /* 悬停时反向渐变，增强交互感 */
+  background-color: #66b1ff;
   border-color: #66b1ff;
 }
 </style>

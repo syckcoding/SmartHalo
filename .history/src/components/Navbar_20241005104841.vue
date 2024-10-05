@@ -3,11 +3,9 @@
     <el-menu-item index="0" class="logo-item">
       <img src="@/assets/intro-image.png" alt="工具LOGO" class="intro-logo" />
     </el-menu-item>
-    <div class="menu-right">
-      <el-menu-item index="1" @click="goToHome">主页</el-menu-item>
-      <el-menu-item index="2" @click="goToAddressOptimization">按地址优化</el-menu-item>
-      <el-menu-item index="3" @click="goToFunctionOptimization">按函数优化</el-menu-item>
-    </div>
+    <el-menu-item index="1" @click="goToHome" class="menu-item">主页</el-menu-item>
+    <el-menu-item index="2" @click="goToAddressOptimization" class="menu-item">按地址优化</el-menu-item>
+    <el-menu-item index="3" @click="goToFunctionOptimization" class="menu-item">按函数优化</el-menu-item>
   </el-menu>
 </template>
 
@@ -34,16 +32,22 @@ export default {
 
 <style scoped>
 .el-menu-demo {
-  background-color: #f8f9fa;  /* 浅灰色背景，与主页阴影一致 */
+  background-color: #ffffff;  /* 设置为白色背景 */
   color: #333;
   padding: 10px;
-  display: flex;  /* 使用Flex布局 */
+  display: flex;
   align-items: center;
-  justify-content: space-between; /* 主轴两端对齐，使左侧logo与右侧菜单分别靠边 */
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  border-bottom: 3px solid #2196f3;  /* 底部添加蓝色线条进行区分 */
 }
 
 .logo-item {
   pointer-events: none;
+  position: absolute;
+  left: 20px;
+  z-index: 10;  /* 保证logo始终在最外层 */
 }
 
 .intro-logo {
@@ -54,14 +58,16 @@ export default {
 
 .el-menu-demo .el-menu-item {
   color: #333;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 0 20px;
-  transition: color 0.3s ease;
+  font-size: 18px;  /* 字体稍微调大一点 */
+  font-weight: bold;  /* 字体调粗一点 */
+}
+
+.menu-item {
+  margin-left: auto;
 }
 
 .menu-right {
   display: flex;
+  gap: 30px;
 }
 </style>
-\

@@ -1,4 +1,3 @@
-<!-- !!!版本一!!! -->
 <!-- <template>
   <div class="home">
     <el-row :gutter="20" class="intro-section">
@@ -113,9 +112,6 @@ export default {
 }
 </style> -->
 
-
-
-<!-- !!!版本二!!! -->
 <!-- <template>
   <div class="home">
     <el-row :gutter="20" class="intro-section">
@@ -235,10 +231,6 @@ export default {
 }
 </style> -->
 
-
-
-
-<!-- !!!版本三!!! -->
 <template>
   <div class="home">
     <el-row :gutter="20" class="intro-section">
