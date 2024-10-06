@@ -29,7 +29,7 @@ export default {
     },
     goToFunctionOptimization() {
       this.activeIndex = '3';
-      this.$router.push({ name: 'FunctionOptimization', params: { mode: 'function' } });
+      this.$router.push({ name: 'Detail', params: { mode: 'function' } });
     },
   },
 };
