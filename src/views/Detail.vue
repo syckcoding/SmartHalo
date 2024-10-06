@@ -4,7 +4,7 @@
       <el-col :span="12">
         <el-card class="box-card">
           <h2>反编译码</h2>
-          <el-input type="textarea" v-model="decompiledCode" placeholder="反编译码" style="width: 100%;" />
+          <el-input type="textarea" resize="none":rows="18" v-model="decompiledCode" placeholder="反编译码" style="width: 100%;resize:none;height:400px" />
           <el-form-item label="选择函数:" class="function-select">
             <el-select v-model="selectedFunction" placeholder="请选择函数" @change="updateCode" filterable clearable style="width: 200px;">
               <el-option
@@ -20,9 +20,9 @@
       <el-col :span="12">
         <el-card class="box-card">
           <h2>优化后代码</h2>
-          <el-input type="textarea" v-model="optimizedCode" placeholder="优化后代码" disabled />
-          <el-button type="primary" @click="copyToClipboard" icon="el-icon-document-copy">一键复制</el-button>
-        </el-card>
+          <el-input type="textarea" resize="none" :rows="18" v-model="optimizedCode" placeholder="优化后代码" disabled />
+          <!-- 移动复制按钮到最下方 -->
+          <el-button type="primary" @click="copyToClipboard" class="copy-button">一键复制</el-button>        </el-card>
       </el-col>
     </el-row>
   </div>
@@ -67,14 +67,17 @@ export default {
   margin-top: 20px;
 }
 .box-card {
-  min-height: 500px;
+  min-height: 600px; /* 调整高度最小值 */
 }
-/* 增加输入框的宽度 */
+.copy-button {
+  margin-top: 20px; /* 添加一些间距以美观展示按钮 */
+}
 .el-input textarea {
   width: 100%;
+  height: 400px; /* 调整输入框和输出框的最小高度 */
+  resize:none;
 }
 
-/* 减小选择函数组合框的宽度 */
 .el-select {
   width: 200px;
 }
