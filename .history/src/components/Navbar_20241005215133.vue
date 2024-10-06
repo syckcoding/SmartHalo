@@ -1,5 +1,5 @@
 <template>
-  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router>
+  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
     <el-menu-item index="0" class="logo-item">
       <img src="@/assets/intro-image.png" alt="工具LOGO" class="intro-logo" />
     </el-menu-item>
@@ -20,16 +20,13 @@ export default {
   },
   methods: {
     goToHome() {
-      this.activeIndex = '1';
       this.$router.push({ name: 'Home' });
     },
     goToAddressOptimization() {
-      this.activeIndex = '2';
-      this.$router.push({ name: 'AddressOptimization' });
+      this.$router.push({ name: 'Detail', params: { mode: 'address' } });
     },
     goToFunctionOptimization() {
-      this.activeIndex = '3';
-      this.$router.push({ name: 'FunctionOptimization', params: { mode: 'function' } });
+      this.$router.push({ name: 'Detail', params: { mode: 'function' } });
     },
   },
 };
@@ -67,3 +64,4 @@ export default {
   display: flex;
 }
 </style>
+\
