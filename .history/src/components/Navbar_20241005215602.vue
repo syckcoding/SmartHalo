@@ -7,7 +7,6 @@
       <el-menu-item index="1" @click="goToHome">主页</el-menu-item>
       <el-menu-item index="2" @click="goToAddressOptimization">按地址优化</el-menu-item>
       <el-menu-item index="3" @click="goToFunctionOptimization">按函数优化</el-menu-item>
-      <el-menu-item index="4" @click="goToUsageGuide">使用教程</el-menu-item>
     </div>
   </el-menu>
 </template>
@@ -30,10 +29,7 @@ export default {
     },
     goToFunctionOptimization() {
       this.activeIndex = '3';
-      this.$router.push({ name: 'FunctionOptimization', params: { mode: 'function' } });
-    },
-    goToUsageGuide() {
-      this.$router.push({ name: 'UsageGuide' });
+      this.$router.push({ name: 'Detail', params: { mode: 'function' } });
     },
   },
 };
@@ -47,7 +43,6 @@ export default {
   display: flex;  /* 使用Flex布局 */
   align-items: center;
   justify-content: space-between; /* 主轴两端对齐，使左侧logo与右侧菜单分别靠边 */
-  position: relative; 
 }
 
 .logo-item {
@@ -59,7 +54,6 @@ export default {
   height: 50px;
   margin-right: 20px;
 }
-
 
 .el-menu-demo .el-menu-item {
   color: #333;

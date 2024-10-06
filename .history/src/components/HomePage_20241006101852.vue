@@ -5,6 +5,8 @@
         <el-card class="intro-card">
           <h1 class="intro-title">智能合约优化工具介绍</h1>
           <p class="intro-description">欢迎使用智能合约优化工具。本工具旨在帮助用户简化合约优化流程，提供便捷的功能和详细的优化分析。</p>
+          <img src="/path/to/intro-image.jpg" alt="合约优化示意图" class="intro-image" />
+          <p class="intro-highlight">我们的工具可以为您节省时间，提高合约效率，并降低开发和部署的复杂度。</p>
         </el-card>
       </el-col>
     </el-row>
@@ -14,6 +16,7 @@
     <el-row :gutter="20" class="contracts">
       <el-col :span="8" v-for="contract in contracts" :key="contract.id">
         <el-card class="box-card">
+          <img :src="contract.image" alt="{{ contract.address }}" class="contract-image" />
           <div class="card-header">
             <h3>合约地址: {{ contract.address }}</h3>
           </div>
@@ -36,9 +39,9 @@ export default {
   data() {
     return {
       contracts: [
-        { id: 1, address: '0x1234...', info: '合约A的详细信息' },
-        { id: 2, address: '0x5678...', info: '合约B的详细信息' },
-        { id: 3, address: '0x9abc...', info: '合约C的详细信息' },
+        { id: 1, address: '0x1234...', info: '合约A的详细信息', image: '/path/to/contractA-image.jpg' },
+        { id: 2, address: '0x5678...', info: '合约B的详细信息', image: '/path/to/contractB-image.jpg' },
+        { id: 3, address: '0x9abc...', info: '合约C的详细信息', image: '/path/to/contractC-image.jpg' },
       ],
     };
   },
@@ -60,7 +63,7 @@ export default {
 }
 .intro-card {
   padding: 30px;
-  min-height: 300px;
+  min-height: 350px;
   background: linear-gradient(to bottom right, #ffffff, #f0f4f8); /* 添加背景渐变，使卡片更具视觉吸引力 */
   border-radius: 15px; /* 增加圆角，使卡片更柔和 */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 加深阴影，突出卡片效果 */
@@ -74,15 +77,20 @@ export default {
 .intro-description {
   font-size: 18px;
   color: #666;
+  margin-bottom: 20px;
 }
-.intro-features {
+.intro-highlight {
+  font-size: 20px;
+  font-weight: bold;
+  color: #409eff;
   margin-top: 20px;
-  padding-left: 20px;
-  font-size: 16px;
-  color: #666;
 }
-.intro-features li {
-  margin-bottom: 10px;
+.intro-image {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin: 20px 0;
+  border-radius: 10px;
 }
 .divider {
   height: 2px;
@@ -102,6 +110,13 @@ export default {
 .box-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* 悬停时增加阴影，提升卡片的层次感 */
+}
+.contract-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 .card-header {
   margin-bottom: 15px;

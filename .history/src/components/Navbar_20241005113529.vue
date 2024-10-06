@@ -1,5 +1,5 @@
 <template>
-  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router>
+  <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
     <el-menu-item index="0" class="logo-item">
       <img src="@/assets/intro-image.png" alt="工具LOGO" class="intro-logo" />
     </el-menu-item>
@@ -7,7 +7,6 @@
       <el-menu-item index="1" @click="goToHome">主页</el-menu-item>
       <el-menu-item index="2" @click="goToAddressOptimization">按地址优化</el-menu-item>
       <el-menu-item index="3" @click="goToFunctionOptimization">按函数优化</el-menu-item>
-      <el-menu-item index="4" @click="goToUsageGuide">使用教程</el-menu-item>
     </div>
   </el-menu>
 </template>
@@ -21,19 +20,13 @@ export default {
   },
   methods: {
     goToHome() {
-      this.activeIndex = '1';
       this.$router.push({ name: 'Home' });
     },
     goToAddressOptimization() {
-      this.activeIndex = '2';
-      this.$router.push({ name: 'AddressOptimization' });
+      this.$router.push({ name: 'Detail', params: { mode: 'address' } });
     },
     goToFunctionOptimization() {
-      this.activeIndex = '3';
-      this.$router.push({ name: 'FunctionOptimization', params: { mode: 'function' } });
-    },
-    goToUsageGuide() {
-      this.$router.push({ name: 'UsageGuide' });
+      this.$router.push({ name: 'Detail', params: { mode: 'function' } });
     },
   },
 };
@@ -47,7 +40,6 @@ export default {
   display: flex;  /* 使用Flex布局 */
   align-items: center;
   justify-content: space-between; /* 主轴两端对齐，使左侧logo与右侧菜单分别靠边 */
-  position: relative; 
 }
 
 .logo-item {
@@ -59,7 +51,6 @@ export default {
   height: 50px;
   margin-right: 20px;
 }
-
 
 .el-menu-demo .el-menu-item {
   color: #333;
