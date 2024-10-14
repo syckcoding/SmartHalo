@@ -5,7 +5,7 @@
         <el-card class="intro-card">
           <h1 class="intro-title">智能合约优化工具介绍</h1>
           <p class="intro-description">欢迎使用智能合约优化工具。本工具旨在帮助用户简化合约优化流程，提供便捷的功能和详细的优化分析。</p>
-          <img src="/path/to/intro-image.jpg" alt="合约优化示意图" class="intro-image" />
+          <img src="/path/to/intro-image.png" alt="合约优化示意图" class="intro-image" />
           <p class="intro-highlight">我们的工具可以为您节省时间，提高合约效率，并降低开发和部署的复杂度。</p>
         </el-card>
       </el-col>

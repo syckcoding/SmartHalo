@@ -33,6 +33,7 @@ export default {
       this.$router.push({ name: 'FunctionOptimization', params: { mode: 'function' } });
     },
     goToUsageGuide() {
+      this.activeIndex = '4';
       this.$router.push({ name: 'UsageGuide' });
     },
   },
@@ -55,11 +56,10 @@ export default {
 }
 
 .intro-logo {
-  width: 50px;
-  height: 50px;
+  max-width: 150px;  /* 增加最大宽度 */
+  max-height: 75px;  /* 增加最大高度 */
   margin-right: 20px;
 }
-
 
 .el-menu-demo .el-menu-item {
   color: #333;
